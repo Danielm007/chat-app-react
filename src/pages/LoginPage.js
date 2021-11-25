@@ -53,6 +53,7 @@ export const LoginPage = () => {
 
       <div className="wrap-input100 validate-input mb-3">
         <input
+          autoComplete="off"
           onChange={handleChange}
           value={email}
           className="input100"
@@ -65,6 +66,7 @@ export const LoginPage = () => {
 
       <div className="wrap-input100 validate-input mb-3">
         <input
+          autoComplete="off"
           onChange={handleChange}
           value={password}
           className="input100"
