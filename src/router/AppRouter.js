@@ -10,8 +10,8 @@ export const AppRouter = () => {
     <Router>
       <div>
         <Routes>
-          <Route path="/*" element={<AuthRouter />} />
           <Route path="/" element={<ChatPage />} />
+          <Route path="/*" element={<AuthRouter />} />
         </Routes>
       </div>
     </Router>
