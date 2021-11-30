@@ -10,7 +10,7 @@ export const SocketContext = createContext();
 
 export const SocketProvider = ({ children }) => {
   const { socket, online, conectarSocket, desconectarSocket } = useSocket(
-    "http://localhost:8080"
+    "https://chat-app-daniel-socket.herokuapp.com"
   );
 
   const { auth } = useContext(AuthContext);
