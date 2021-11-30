@@ -1,5 +1,7 @@
-import { createContext, useCallback, useState } from "react";
+import { createContext, useCallback, useContext, useState } from "react";
 import { api } from "../api/axiosClient";
+import { ChatContext } from "../context/chat/ChatContext";
+import { types } from "../types/types";
 
 export const AuthContext = createContext();
 
@@ -13,6 +15,7 @@ const initialState = {
 
 export const AuthContextProvider = ({ children }) => {
   const [auth, setAuth] = useState(initialState);
+  const { dispatch } = useContext(ChatContext);
 
   const login = async (email, password) => {
     try {
@@ -108,6 +111,7 @@ export const AuthContextProvider = ({ children }) => {
       nombre: null,
       email: null,
     });
+    dispatch({ type: types.cerrarSesion });
   };
 
   return (
