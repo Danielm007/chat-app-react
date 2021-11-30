@@ -7,8 +7,8 @@ export const LoginPage = () => {
   const { login } = useContext(AuthContext);
 
   const [formValues, setFormValues] = useState({
-    email: localStorage.getItem("email") || "test1@test.com",
-    password: "abc123",
+    email: localStorage.getItem("email") || "",
+    password: "",
     rememberme: true,
   });
 
